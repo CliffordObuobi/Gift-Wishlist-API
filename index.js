@@ -1,6 +1,6 @@
 import express from "express";
 import wishlistRouter from "./routes/wishlist_route.js";
-import router from "./routes/auth_routes.js"; // Renamed for clarity
+import router from "./routes/auth_routes.js"; 
 import "dotenv/config";
 import mongoose from "mongoose";
 
@@ -10,8 +10,8 @@ mongoose
     .then(() => {
         console.log("Database is Connected");
     })
-    .catch((err) => {
-        console.error("Database connection error:", err); // Log the error
+    .catch((error) => {
+        console.error("Database connection error:", error); // Log the error
     });
 
 // Create an Express app

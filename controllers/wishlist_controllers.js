@@ -12,8 +12,8 @@ export async function addWishlist(req, res) {
       });
       await wishlist.save();
       res.status(201).json(wishlist);
-  } catch (err) {
-      res.status(500).json({ message: err.message });
+  } catch (error) {
+      res.status(500).json({ message: error.message });
   }
 }
 
@@ -22,8 +22,8 @@ export async function getWishlist(req, res) {
   try {
       const wishlists = await WishlistModel.find({ userId: req.user.userId });
       res.json(wishlists);
-  } catch (err) {
-      res.status(500).json({ message: err.message });
+  } catch (error) {
+      res.status(500).json({ message: error.message });
   }
 };
 
@@ -39,7 +39,7 @@ export async function deleteWishlist(req, res) {
       }
       await WishlistModel.findByIdAndDelete(req.params.id);
       res.json({ message: 'Wishlist item deleted' });
-  } catch (err) {
-      res.status(500).json({ message: err.message });
+  } catch (error) {
+      res.status(500).json({ message: error.message });
   }
 }
