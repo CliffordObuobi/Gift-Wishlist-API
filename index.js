@@ -21,11 +21,11 @@ const app = express();
 app.use(express.json());
 
 // Use routes
-app.use("/api/", wishlistRouter); // Mount wishlist routes with base URL
+app.use("/api", wishlistRouter); // Mount wishlist routes with base URL
 app.use("/auth", router); // Mount authentication routes with base URL
 
 // Listen for incoming request
 const port = process.env.PORT || 6000;
 app.listen(port, () => {
-    console.log(`Server is listening on port ${port}`); // Added space
+    console.log(`Server is listening on port ${port}`); 
 });

@@ -1,6 +1,5 @@
 import { WishlistModel } from "../models/wishlist_models.js";
 
-import { addwishlistValidator } from "../validators/wishlist_validators.js";
 
 // Add items they want as gifts
 
